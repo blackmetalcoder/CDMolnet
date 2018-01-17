@@ -1,0 +1,680 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{66689960-485A-47E9-84F8-16E623EF9DD9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebDemoCDMolnet</RootNamespace>
+    <AssemblyName>WebDemoCDMolnet</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ParkSquare.Gracenote, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ParkSquare.Gracenote.1.4.0.0\lib\net40\ParkSquare.Gracenote.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bilder\mobil\Artist.PNG" />
+    <Content Include="bilder\mobil\ArtistInfo.PNG" />
+    <Content Include="bilder\mobil\ArtistInfo_thumb.png" />
+    <Content Include="bilder\mobil\Artist_thumb.png" />
+    <Content Include="bilder\mobil\inlogg.PNG" />
+    <Content Include="bilder\mobil\inlogg_thumb.png" />
+    <Content Include="bilder\mobil\LiknandeGrupper.PNG" />
+    <Content Include="bilder\mobil\LiknandeGrupper_thumb.png" />
+    <Content Include="bilder\mobil\Search.PNG" />
+    <Content Include="bilder\mobil\SearchTracks.PNG" />
+    <Content Include="bilder\mobil\SearchTracks_thumb.png" />
+    <Content Include="bilder\mobil\Search_thumb.png" />
+    <Content Include="bilder\mobil\Start.PNG" />
+    <Content Include="bilder\mobil\Start_thumb.png" />
+    <Content Include="bilder\mobil\TopAlbums.PNG" />
+    <Content Include="bilder\mobil\TopAlbums_thumb.png" />
+    <Content Include="bilder\mobil\Tracks.PNG" />
+    <Content Include="bilder\mobil\Tracks_thumb.png" />
+    <Content Include="bilder\windows\getCD.PNG" />
+    <Content Include="bilder\windows\getCD_thumb.png" />
+    <Content Include="bilder\windows\getInfo.PNG" />
+    <Content Include="bilder\windows\getInfo_thumb.png" />
+    <Content Include="bilder\windows\inloggad.PNG" />
+    <Content Include="bilder\windows\inloggad_thumb.png" />
+    <Content Include="bilder\windows\ManuellCD.PNG" />
+    <Content Include="bilder\windows\ManuellCD_thumb.png" />
+    <Content Include="bilder\windows\Sparat.PNG" />
+    <Content Include="bilder\windows\Sparat_thumb.png" />
+    <Content Include="bilder\windows\Start.PNG" />
+    <Content Include="bilder\windows\Start_thumb.png" />
+    <Content Include="bilder\windows\Vinyl.JPG" />
+    <Content Include="bilder\windows\Vinyl_thumb.png" />
+    <Content Include="CDService.asmx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootswatch\amelia\bootstrap-responsive.css" />
+    <Content Include="Content\bootswatch\amelia\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootswatch\amelia\bootstrap.css" />
+    <Content Include="Content\bootswatch\amelia\bootstrap.min.css" />
+    <Content Include="Content\bootswatch\cerulean\bootstrap-responsive.css" />
+    <Content Include="Content\bootswatch\cerulean\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootswatch\cerulean\bootstrap.css" />
+    <Content Include="Content\bootswatch\cerulean\bootstrap.min.css" />
+    <Content Include="Content\bootswatch\cosmo\bootstrap-responsive.css" />
+    <Content Include="Content\bootswatch\cosmo\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootswatch\cosmo\bootstrap.css" />
+    <Content Include="Content\bootswatch\cosmo\bootstrap.min.css" />
+    <Content Include="Content\bootswatch\cyborg\bootstrap-responsive.css" />
+    <Content Include="Content\bootswatch\cyborg\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootswatch\cyborg\bootstrap.css" />
+    <Content Include="Content\bootswatch\cyborg\bootstrap.min.css" />
+    <Content Include="Content\bootswatch\flatly\bootstrap-responsive.css" />
+    <Content Include="Content\bootswatch\flatly\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootswatch\flatly\bootstrap.css" />
+    <Content Include="Content\bootswatch\flatly\bootstrap.min.css" />
+    <Content Include="Content\bootswatch\journal\bootstrap-responsive.css" />
+    <Content Include="Content\bootswatch\journal\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootswatch\journal\bootstrap.css" />
+    <Content Include="Content\bootswatch\journal\bootstrap.min.css" />
+    <Content Include="Content\bootswatch\readable\bootstrap-responsive.css" />
+    <Content Include="Content\bootswatch\readable\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootswatch\readable\bootstrap.css" />
+    <Content Include="Content\bootswatch\readable\bootstrap.min.css" />
+    <Content Include="Content\bootswatch\simplex\bootstrap-responsive.css" />
+    <Content Include="Content\bootswatch\simplex\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootswatch\simplex\bootstrap.css" />
+    <Content Include="Content\bootswatch\simplex\bootstrap.min.css" />
+    <Content Include="Content\bootswatch\slate\bootstrap-responsive.css" />
+    <Content Include="Content\bootswatch\slate\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootswatch\slate\bootstrap.css" />
+    <Content Include="Content\bootswatch\slate\bootstrap.min.css" />
+    <Content Include="Content\bootswatch\spacelab\bootstrap-responsive.css" />
+    <Content Include="Content\bootswatch\spacelab\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootswatch\spacelab\bootstrap.css" />
+    <Content Include="Content\bootswatch\spacelab\bootstrap.min.css" />
+    <Content Include="Content\bootswatch\spruce\bootstrap-responsive.css" />
+    <Content Include="Content\bootswatch\spruce\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootswatch\spruce\bootstrap.css" />
+    <Content Include="Content\bootswatch\spruce\bootstrap.min.css" />
+    <Content Include="Content\bootswatch\superhero\bootstrap-responsive.css" />
+    <Content Include="Content\bootswatch\superhero\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootswatch\superhero\bootstrap.css" />
+    <Content Include="Content\bootswatch\superhero\bootstrap.min.css" />
+    <Content Include="Content\bootswatch\united\bootstrap-responsive.css" />
+    <Content Include="Content\bootswatch\united\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootswatch\united\bootstrap.css" />
+    <Content Include="Content\bootswatch\united\bootstrap.min.css" />
+    <Content Include="Content\DataTables-1.9.4\docs\media\css\doc.css" />
+    <Content Include="Content\DataTables-1.9.4\docs\media\css\shCore.css" />
+    <Content Include="Content\DataTables-1.9.4\docs\media\css\shThemeDataTables.css" />
+    <Content Include="Content\DataTables-1.9.4\docs\media\images\arrow.jpg" />
+    <Content Include="Content\DataTables-1.9.4\docs\media\images\arrow.png" />
+    <Content Include="Content\DataTables-1.9.4\docs\media\images\extended.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\AutoFill\media\css\AutoFill.css" />
+    <Content Include="Content\DataTables-1.9.4\extras\AutoFill\media\docs\media\css\doc.css" />
+    <Content Include="Content\DataTables-1.9.4\extras\AutoFill\media\docs\media\css\shCore.css" />
+    <Content Include="Content\DataTables-1.9.4\extras\AutoFill\media\docs\media\css\shThemeDataTables.css" />
+    <Content Include="Content\DataTables-1.9.4\extras\AutoFill\media\docs\media\images\arrow.jpg" />
+    <Content Include="Content\DataTables-1.9.4\extras\AutoFill\media\docs\media\images\arrow.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\AutoFill\media\docs\media\images\extended.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\AutoFill\media\images\filler.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\ColReorder\media\css\ColReorder.css" />
+    <Content Include="Content\DataTables-1.9.4\extras\ColReorder\media\docs\media\css\doc.css" />
+    <Content Include="Content\DataTables-1.9.4\extras\ColReorder\media\docs\media\css\shCore.css" />
+    <Content Include="Content\DataTables-1.9.4\extras\ColReorder\media\docs\media\css\shThemeDataTables.css" />
+    <Content Include="Content\DataTables-1.9.4\extras\ColReorder\media\docs\media\images\arrow.jpg" />
+    <Content Include="Content\DataTables-1.9.4\extras\ColReorder\media\docs\media\images\arrow.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\ColReorder\media\docs\media\images\extended.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\ColReorder\media\images\insert.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\ColVis\media\css\ColVis.css" />
+    <Content Include="Content\DataTables-1.9.4\extras\ColVis\media\css\ColVisAlt.css" />
+    <Content Include="Content\DataTables-1.9.4\extras\ColVis\media\docs\media\css\doc.css" />
+    <Content Include="Content\DataTables-1.9.4\extras\ColVis\media\docs\media\css\shCore.css" />
+    <Content Include="Content\DataTables-1.9.4\extras\ColVis\media\docs\media\css\shThemeDataTables.css" />
+    <Content Include="Content\DataTables-1.9.4\extras\ColVis\media\docs\media\images\arrow.jpg" />
+    <Content Include="Content\DataTables-1.9.4\extras\ColVis\media\docs\media\images\arrow.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\ColVis\media\docs\media\images\extended.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\ColVis\media\images\button.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\FixedColumns\docs\media\css\doc.css" />
+    <Content Include="Content\DataTables-1.9.4\extras\FixedColumns\docs\media\css\shCore.css" />
+    <Content Include="Content\DataTables-1.9.4\extras\FixedColumns\docs\media\css\shThemeDataTables.css" />
+    <Content Include="Content\DataTables-1.9.4\extras\FixedColumns\docs\media\images\arrow.jpg" />
+    <Content Include="Content\DataTables-1.9.4\extras\FixedColumns\docs\media\images\arrow.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\FixedColumns\docs\media\images\extended.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\Scroller\media\css\dataTables.scroller.css" />
+    <Content Include="Content\DataTables-1.9.4\extras\Scroller\media\docs\media\css\doc.css" />
+    <Content Include="Content\DataTables-1.9.4\extras\Scroller\media\docs\media\css\shCore.css" />
+    <Content Include="Content\DataTables-1.9.4\extras\Scroller\media\docs\media\css\shThemeDataTables.css" />
+    <Content Include="Content\DataTables-1.9.4\extras\Scroller\media\docs\media\images\arrow.jpg" />
+    <Content Include="Content\DataTables-1.9.4\extras\Scroller\media\docs\media\images\arrow.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\Scroller\media\docs\media\images\extended.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\Scroller\media\images\loading-background.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\TableTools\media\css\TableTools.css" />
+    <Content Include="Content\DataTables-1.9.4\extras\TableTools\media\css\TableTools_JUI.css" />
+    <Content Include="Content\DataTables-1.9.4\extras\TableTools\media\images\background.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\TableTools\media\images\collection.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\TableTools\media\images\collection_hover.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\TableTools\media\images\copy.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\TableTools\media\images\copy_hover.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\TableTools\media\images\csv.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\TableTools\media\images\csv_hover.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\TableTools\media\images\pdf.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\TableTools\media\images\pdf_hover.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\TableTools\media\images\print.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\TableTools\media\images\print_hover.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\TableTools\media\images\xls.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\TableTools\media\images\xls_hover.png" />
+    <Content Include="Content\DataTables-1.9.4\extras\TableTools\media\swf\copy_csv_xls.swf" />
+    <Content Include="Content\DataTables-1.9.4\extras\TableTools\media\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="Content\DataTables-1.9.4\media\css\demo_page.css" />
+    <Content Include="Content\DataTables-1.9.4\media\css\demo_table.css" />
+    <Content Include="Content\DataTables-1.9.4\media\css\demo_table_jui.css" />
+    <Content Include="Content\DataTables-1.9.4\media\css\jquery.dataTables.css" />
+    <Content Include="Content\DataTables-1.9.4\media\css\jquery.dataTables_themeroller.css" />
+    <Content Include="Content\DataTables-1.9.4\media\images\back_disabled.png" />
+    <Content Include="Content\DataTables-1.9.4\media\images\back_enabled.png" />
+    <Content Include="Content\DataTables-1.9.4\media\images\back_enabled_hover.png" />
+    <Content Include="Content\DataTables-1.9.4\media\images\favicon.ico" />
+    <Content Include="Content\DataTables-1.9.4\media\images\forward_disabled.png" />
+    <Content Include="Content\DataTables-1.9.4\media\images\forward_enabled.png" />
+    <Content Include="Content\DataTables-1.9.4\media\images\forward_enabled_hover.png" />
+    <Content Include="Content\DataTables-1.9.4\media\images\sort_asc.png" />
+    <Content Include="Content\DataTables-1.9.4\media\images\sort_asc_disabled.png" />
+    <Content Include="Content\DataTables-1.9.4\media\images\sort_both.png" />
+    <Content Include="Content\DataTables-1.9.4\media\images\sort_desc.png" />
+    <Content Include="Content\DataTables-1.9.4\media\images\sort_desc_disabled.png" />
+    <Content Include="Content\images\glyphicons-halflings-white.png" />
+    <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Content\jquery.jqGrid\ellipsis-xbl.xml" />
+    <Content Include="Content\jquery.jqGrid\ui.jqgrid.css" />
+    <Content Include="Content\themes\base\images\animated-overlay.gif" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.menu.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.spinner.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="Content\themes\base\minified\images\animated-overlay.gif" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.menu.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.spinner.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="download.html" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="functions\funktioner.js" />
+    <Content Include="highslide\graphics\close.png" />
+    <Content Include="highslide\graphics\closeX.png" />
+    <Content Include="highslide\graphics\controlbar-black-border.gif" />
+    <Content Include="highslide\graphics\controlbar-text-buttons.png" />
+    <Content Include="highslide\graphics\controlbar-white-small.gif" />
+    <Content Include="highslide\graphics\controlbar-white.gif" />
+    <Content Include="highslide\graphics\controlbar2.gif" />
+    <Content Include="highslide\graphics\controlbar3.gif" />
+    <Content Include="highslide\graphics\controlbar4-hover.gif" />
+    <Content Include="highslide\graphics\controlbar4.gif" />
+    <Content Include="highslide\graphics\fullexpand.gif" />
+    <Content Include="highslide\graphics\geckodimmer.png" />
+    <Content Include="highslide\graphics\icon.gif" />
+    <Content Include="highslide\graphics\loader.gif" />
+    <Content Include="highslide\graphics\loader.white.gif" />
+    <Content Include="highslide\graphics\outlines\beveled.png" />
+    <Content Include="highslide\graphics\outlines\drop-shadow.png" />
+    <Content Include="highslide\graphics\outlines\glossy-dark.png" />
+    <Content Include="highslide\graphics\outlines\outer-glow.png" />
+    <Content Include="highslide\graphics\outlines\rounded-black.png" />
+    <Content Include="highslide\graphics\outlines\rounded-white.png" />
+    <Content Include="highslide\graphics\resize.gif" />
+    <Content Include="highslide\graphics\scrollarrows.png" />
+    <Content Include="highslide\graphics\zoomin.cur" />
+    <Content Include="highslide\graphics\zoomout.cur" />
+    <Content Include="highslide\highslide.css" />
+    <Content Include="highslide\highslide-with-gallery.min.js" />
+    <Content Include="images\CD.PNG" />
+    <Content Include="images\CD_liten.png" />
+    <Content Include="images\CD_tum.png" />
+    <Content Include="images\mobil\Artist.PNG" />
+    <Content Include="images\mobil\ArtistInfo.PNG" />
+    <Content Include="images\mobil\inlogg.PNG" />
+    <Content Include="images\mobil\LiknandeGrupper.PNG" />
+    <Content Include="images\mobil\Search.PNG" />
+    <Content Include="images\mobil\SearchTracks.PNG" />
+    <Content Include="images\mobil\Start.PNG" />
+    <Content Include="images\mobil\TopAlbums.PNG" />
+    <Content Include="images\mobil\Tracks.PNG" />
+    <Content Include="images\Start_liten.png" />
+    <Content Include="images\Vinyl_liten.png" />
+    <Content Include="images\windows\getCD.PNG" />
+    <Content Include="images\windows\getInfo.PNG" />
+    <Content Include="images\windows\inloggad.PNG" />
+    <Content Include="images\windows\ManuellCD.PNG" />
+    <Content Include="images\windows\Sparat.PNG" />
+    <Content Include="images\windows\Start.PNG" />
+    <Content Include="images\windows\Vinyl.JPG" />
+    <Content Include="index.html" />
+    <Content Include="Content\jqx.base.css" />
+    <Content Include="Content\jqx.web.css" />
+    <Content Include="kontakt.html" />
+    <Content Include="minaalbum.html" />
+    <Content Include="minacd.html" />
+    <Content Include="minmusik.html" />
+    <Content Include="mobil.html" />
+    <Content Include="om.html" />
+    <Content Include="packages.config" />
+    <Content Include="Readme.txt" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\DataTables-1.9.4\docs\media\js\doc.js" />
+    <Content Include="Scripts\DataTables-1.9.4\docs\media\js\jquery.js" />
+    <Content Include="Scripts\DataTables-1.9.4\docs\media\js\shBrushJScript.js" />
+    <Content Include="Scripts\DataTables-1.9.4\docs\media\js\shCore.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\AutoFill\media\docs\media\js\doc.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\AutoFill\media\docs\media\js\jquery.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\AutoFill\media\docs\media\js\shBrushJScript.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\AutoFill\media\docs\media\js\shCore.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\AutoFill\media\js\AutoFill.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\AutoFill\media\js\AutoFill.min.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\ColReorder\media\docs\media\js\doc.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\ColReorder\media\docs\media\js\jquery.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\ColReorder\media\docs\media\js\shBrushJScript.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\ColReorder\media\docs\media\js\shCore.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\ColReorder\media\js\ColReorder.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\ColReorder\media\js\ColReorder.min.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\ColVis\media\docs\media\js\doc.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\ColVis\media\docs\media\js\jquery.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\ColVis\media\docs\media\js\shBrushJScript.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\ColVis\media\docs\media\js\shCore.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\ColVis\media\js\ColVis.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\ColVis\media\js\ColVis.min.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\FixedColumns\docs\media\js\doc.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\FixedColumns\docs\media\js\jquery.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\FixedColumns\docs\media\js\shBrushJScript.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\FixedColumns\docs\media\js\shCore.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\FixedColumns\media\js\FixedColumns.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\FixedColumns\media\js\FixedColumns.min.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\Scroller\media\docs\media\js\doc.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\Scroller\media\docs\media\js\jquery.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\Scroller\media\docs\media\js\shBrushJScript.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\Scroller\media\docs\media\js\shCore.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\Scroller\media\js\dataTables.scroller.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\Scroller\media\js\dataTables.scroller.min.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\TableTools\media\js\TableTools.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\TableTools\media\js\TableTools.min.js" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\TableTools\media\js\TableTools.min.js.gz" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\Scroller\media\js\dataTables.scroller.min.js.gz" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\FixedColumns\media\js\FixedColumns.min.js.gz" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\ColVis\media\js\ColVis.min.js.gz" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\ColReorder\media\js\ColReorder.min.js.gz" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\AutoFill\media\js\AutoFill.min.js.gz" />
+    <Content Include="Content\DataTables-1.9.4\media\images\Sorting icons.psd" />
+    <Content Include="Content\DataTables-1.9.4\extras\TableTools\media\images\psd\printer.psd" />
+    <Content Include="Content\DataTables-1.9.4\extras\TableTools\media\images\psd\file_types.psd" />
+    <Content Include="Content\DataTables-1.9.4\extras\TableTools\media\images\psd\copy document.psd" />
+    <Content Include="Content\DataTables-1.9.4\extras\TableTools\media\images\psd\collection.psd" />
+    <Content Include="Scripts\jquery.slides.min.js" />
+    <Content Include="Scripts\jqx-all.js" />
+    <Content Include="Scripts\jqxchart.js" />
+    <Content Include="Scripts\jqxcore.js" />
+    <Content Include="Scripts\jqxdata.js" />
+    <Content Include="styles\cdmolnet.css" />
+    <Content Include="styles\images\backgroundTop.png" />
+    <Content Include="styles\images\backImage.png" />
+    <Content Include="styles\images\bg_black.png" />
+    <Content Include="styles\images\bg_blackhover.png" />
+    <Content Include="styles\images\bg_blackhover_horizontal.png" />
+    <Content Include="styles\images\bg_blackpressed.png" />
+    <Content Include="styles\images\bg_blackpressed_horizontal.png" />
+    <Content Include="styles\images\bg_black_horizontal.png" />
+    <Content Include="styles\images\bg_blueenergy.png" />
+    <Content Include="styles\images\bg_darkblue.png" />
+    <Content Include="styles\images\bg_darkbluehover.png" />
+    <Content Include="styles\images\bg_darkbluepressed.png" />
+    <Content Include="styles\images\blackbackground.png" />
+    <Content Include="styles\images\black_gradient.png" />
+    <Content Include="styles\images\check_black.png" />
+    <Content Include="styles\images\check_blue.png" />
+    <Content Include="styles\images\check_blue_indeterminate.png" />
+    <Content Include="styles\images\check_disabled.png" />
+    <Content Include="styles\images\check_indeterminate_black.png" />
+    <Content Include="styles\images\check_indeterminate_disabled.png" />
+    <Content Include="styles\images\check_indeterminate_white.png" />
+    <Content Include="styles\images\check_lightblue.png" />
+    <Content Include="styles\images\check_lightblue_indeterminate.png" />
+    <Content Include="styles\images\check_white.png" />
+    <Content Include="styles\images\close.png" />
+    <Content Include="styles\images\close_blue.png" />
+    <Content Include="styles\images\close_white.png" />
+    <Content Include="styles\images\crosshair-white.png" />
+    <Content Include="styles\images\crosshair.png" />
+    <Content Include="styles\images\darkred_gradient.png" />
+    <Content Include="styles\images\drag.png" />
+    <Content Include="styles\images\dragcancel.png" />
+    <Content Include="styles\images\filter.png" />
+    <Content Include="styles\images\icon-cancel-white.png" />
+    <Content Include="styles\images\icon-cancel.png" />
+    <Content Include="styles\images\icon-delete - Copy.png" />
+    <Content Include="styles\images\icon-delete-white.png" />
+    <Content Include="styles\images\icon-delete.png" />
+    <Content Include="styles\images\icon-down-blue.png" />
+    <Content Include="styles\images\icon-down-transparent.png" />
+    <Content Include="styles\images\icon-down-white.png" />
+    <Content Include="styles\images\icon-down.png" />
+    <Content Include="styles\images\icon-edit-white.png" />
+    <Content Include="styles\images\icon-edit.png" />
+    <Content Include="styles\images\icon-first-blue.png" />
+    <Content Include="styles\images\icon-first-transparent.png" />
+    <Content Include="styles\images\icon-first-white.png" />
+    <Content Include="styles\images\icon-first.png" />
+    <Content Include="styles\images\icon-last-blue.png" />
+    <Content Include="styles\images\icon-last-transparent.png" />
+    <Content Include="styles\images\icon-last-white.png" />
+    <Content Include="styles\images\icon-last.png" />
+    <Content Include="styles\images\icon-left-blue.png" />
+    <Content Include="styles\images\icon-left-transparent.png" />
+    <Content Include="styles\images\icon-left-white.png" />
+    <Content Include="styles\images\icon-left.png" />
+    <Content Include="styles\images\icon-right-blue.png" />
+    <Content Include="styles\images\icon-right-transparent.png" />
+    <Content Include="styles\images\icon-right-white.png" />
+    <Content Include="styles\images\icon-right.png" />
+    <Content Include="styles\images\icon-save-white.png" />
+    <Content Include="styles\images\icon-save.png" />
+    <Content Include="styles\images\icon-showpassword.png" />
+    <Content Include="styles\images\icon-up-blue.png" />
+    <Content Include="styles\images\icon-up-transparent.png" />
+    <Content Include="styles\images\icon-up-white.png" />
+    <Content Include="styles\images\icon-up.png" />
+    <Content Include="styles\images\loader.gif" />
+    <Content Include="styles\images\menubutton.png" />
+    <Content Include="styles\images\metro-icon-down-white.png" />
+    <Content Include="styles\images\metro-icon-down.png" />
+    <Content Include="styles\images\metro-icon-first-white.png" />
+    <Content Include="styles\images\metro-icon-first.png" />
+    <Content Include="styles\images\metro-icon-last-white.png" />
+    <Content Include="styles\images\metro-icon-last.png" />
+    <Content Include="styles\images\metro-icon-left-white.png" />
+    <Content Include="styles\images\metro-icon-left.png" />
+    <Content Include="styles\images\metro-icon-right - Copy.png" />
+    <Content Include="styles\images\metro-icon-right-white.png" />
+    <Content Include="styles\images\metro-icon-right.png" />
+    <Content Include="styles\images\metro-icon-up-white.png" />
+    <Content Include="styles\images\metro-icon-up.png" />
+    <Content Include="styles\images\multi-arrow.gif" />
+    <Content Include="styles\images\office-icon-down.png" />
+    <Content Include="styles\images\office-icon-left.png" />
+    <Content Include="styles\images\office-icon-right.png" />
+    <Content Include="styles\images\office-icon-up.png" />
+    <Content Include="styles\images\plus.png" />
+    <Content Include="styles\images\plus_white.png" />
+    <Content Include="styles\images\pointer.png" />
+    <Content Include="styles\images\rangebar_classic.png" />
+    <Content Include="styles\images\rangebar_darkblue.png" />
+    <Content Include="styles\images\rangebar_shinyblack.png" />
+    <Content Include="styles\images\rangebar_summer.png" />
+    <Content Include="styles\images\red_arrow_down.png" />
+    <Content Include="styles\images\red_arrow_up.png" />
+    <Content Include="styles\images\red_gradient.png" />
+    <Content Include="styles\images\roundbg_check_black.png" />
+    <Content Include="styles\images\roundbg_check_disabled.png" />
+    <Content Include="styles\images\roundbg_check_indeterminate.png" />
+    <Content Include="styles\images\roundbg_check_white.png" />
+    <Content Include="styles\images\roundbg_classic_hover.png" />
+    <Content Include="styles\images\roundbg_classic_normal.png" />
+    <Content Include="styles\images\roundbg_disabled.png" />
+    <Content Include="styles\images\search.png" />
+    <Content Include="styles\images\search_white.png" />
+    <Content Include="styles\images\sortasc.png" />
+    <Content Include="styles\images\sortascbutton.png" />
+    <Content Include="styles\images\sortdesc.png" />
+    <Content Include="styles\images\sortdescbutton.png" />
+    <Content Include="styles\images\sortremove.png" />
+    <Content Include="styles\images\star.png" />
+    <Content Include="styles\images\star_disabled.png" />
+    <Content Include="styles\images\star_hover.png" />
+    <Content Include="styles\images\tick.png" />
+    <Content Include="styles\images\track_classic.png" />
+    <Content Include="styles\images\track_darkblue.png" />
+    <Content Include="styles\images\track_shinyblack.png" />
+    <Content Include="styles\images\track_summer.png" />
+    <Content Include="styles\images\wp_check_indeterminate_white.png" />
+    <Content Include="styles\images\wp_check_white.png" />
+    <Content Include="styles\jqx.base.css" />
+    <Content Include="styles\jqx.bootstrap.css" />
+    <Content Include="styles\jqx.web.css" />
+    <Content Include="test.html" />
+    <Content Include="windows.html" />
+    <Content Include="highslide\graphics\outlines\Outlines.psd" />
+    <Content Include="download\Setup.zip" />
+    <Content Include="download\CDMOLNET.pdf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Scripts\jquery-2.0.2.intellisense.js" />
+    <Content Include="reguser.html" />
+    <Content Include="Scripts\DataTables-1.9.4\extras\TableTools\media\js\ZeroClipboard.js" />
+    <Content Include="Scripts\DataTables-1.9.4\media\js\jquery.dataTables.js" />
+    <Content Include="Scripts\DataTables-1.9.4\media\js\jquery.dataTables.min.js" />
+    <Content Include="Scripts\DataTables-1.9.4\media\js\jquery.js" />
+    <Content Include="Scripts\i18n\grid.locale-ar.js" />
+    <Content Include="Scripts\i18n\grid.locale-bg.js" />
+    <Content Include="Scripts\i18n\grid.locale-bg1251.js" />
+    <Content Include="Scripts\i18n\grid.locale-cat.js" />
+    <Content Include="Scripts\i18n\grid.locale-cn.js" />
+    <Content Include="Scripts\i18n\grid.locale-cs.js" />
+    <Content Include="Scripts\i18n\grid.locale-da.js" />
+    <Content Include="Scripts\i18n\grid.locale-de.js" />
+    <Content Include="Scripts\i18n\grid.locale-dk.js" />
+    <Content Include="Scripts\i18n\grid.locale-el.js" />
+    <Content Include="Scripts\i18n\grid.locale-en.js" />
+    <Content Include="Scripts\i18n\grid.locale-es.js" />
+    <Content Include="Scripts\i18n\grid.locale-fa.js" />
+    <Content Include="Scripts\i18n\grid.locale-fi.js" />
+    <Content Include="Scripts\i18n\grid.locale-fr.js" />
+    <Content Include="Scripts\i18n\grid.locale-gl.js" />
+    <Content Include="Scripts\i18n\grid.locale-he.js" />
+    <Content Include="Scripts\i18n\grid.locale-hr.js" />
+    <Content Include="Scripts\i18n\grid.locale-hr1250.js" />
+    <Content Include="Scripts\i18n\grid.locale-hu.js" />
+    <Content Include="Scripts\i18n\grid.locale-id.js" />
+    <Content Include="Scripts\i18n\grid.locale-is.js" />
+    <Content Include="Scripts\i18n\grid.locale-it.js" />
+    <Content Include="Scripts\i18n\grid.locale-ja.js" />
+    <Content Include="Scripts\i18n\grid.locale-kr.js" />
+    <Content Include="Scripts\i18n\grid.locale-lt.js" />
+    <Content Include="Scripts\i18n\grid.locale-mne.js" />
+    <Content Include="Scripts\i18n\grid.locale-nl.js" />
+    <Content Include="Scripts\i18n\grid.locale-no.js" />
+    <Content Include="Scripts\i18n\grid.locale-pl.js" />
+    <Content Include="Scripts\i18n\grid.locale-pt-br.js" />
+    <Content Include="Scripts\i18n\grid.locale-pt.js" />
+    <Content Include="Scripts\i18n\grid.locale-ro.js" />
+    <Content Include="Scripts\i18n\grid.locale-ru.js" />
+    <Content Include="Scripts\i18n\grid.locale-sk.js" />
+    <Content Include="Scripts\i18n\grid.locale-sr-latin.js" />
+    <Content Include="Scripts\i18n\grid.locale-sr.js" />
+    <Content Include="Scripts\i18n\grid.locale-sv.js" />
+    <Content Include="Scripts\i18n\grid.locale-th.js" />
+    <Content Include="Scripts\i18n\grid.locale-tr.js" />
+    <Content Include="Scripts\i18n\grid.locale-tw.js" />
+    <Content Include="Scripts\i18n\grid.locale-ua.js" />
+    <Content Include="Scripts\i18n\grid.locale-vi.js" />
+    <Content Include="Scripts\jquery-2.0.2.js" />
+    <Content Include="Scripts\jquery-2.0.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.min.js" />
+    <Content Include="Scripts\jquery.jqGrid.js" />
+    <Content Include="Scripts\jquery.jqGrid.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-2.0.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Album.cs" />
+    <Compile Include="Artist.cs" />
+    <Compile Include="ArtistCD.cs" />
+    <Compile Include="ArtistVinyl.cs" />
+    <Compile Include="Bilder.cs" />
+    <Compile Include="cArtist.cs" />
+    <Compile Include="CDinfo.cs" />
+    <Compile Include="CDperAr.cs" />
+    <Compile Include="CDService.asmx.cs">
+      <DependentUpon>CDService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DatUtils.cs" />
+    <Compile Include="gArtist.cs" />
+    <Compile Include="LikandeArtister.cs" />
+    <Compile Include="PerAr.cs" />
+    <Compile Include="PieMedia.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomAlbums.cs" />
+    <Compile Include="SenasteAlbum.cs" />
+    <Compile Include="topAlbums.cs" />
+    <Compile Include="Tracks.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1239/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rega användare</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Din musik-samling online, se din samling i datorn, mobilen och surfplattan">
+    <meta name="keywords" content="CD-databas, musiksamling online, Min musik, CD info, Vinyl info,">
+     <link href="Content/bootstrap.css" rel="stylesheet"/>
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+     <script src="Scripts/jquery-2.0.2.js"></script>
+      <script src="functions/funktioner.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+</head>
+<body>
+       <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">CDMOLNET</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="index.html">Hem</a></li>
+              <li><a href="om.html">Om</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mina CD <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="download.html">Ladda ner</a></li>
+                  <li><a href="minmusik.html">Min Musik</a></li>
+                  <li><a href="http://cdmolnet.se/m/default.cshtml" target="_blank">Gå till mobil-sajt</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    <!--<form class="form-horizontal">-->
+<fieldset>
+
+<!-- Form Name -->
+<legend>registrera ny användare</legend>
+<div class="container">
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="txtFnamn">Förnamn</label>
+  <div class="controls">
+    <input id="txtFnamn" name="txtFnamn" placeholder="Förnamn" class="input-medium" required="" type="text">
+    <p class="help-block">Skriv in ditt förnamn</p>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="txtEnamn">Efternamn</label>
+  <div class="controls">
+    <input id="txtEnamn" name="txtEnamn" placeholder="Efternamn" class="input-medium" required="" type="text">
+    <p class="help-block">Skriv in ditt efternamn</p>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="txtUsername">Användarnamn</label>
+  <div class="controls">
+    <input id="txtUsername" name="txtUsername" placeholder="Ditt användarnamn" class="input-medium" required="" type="text">
+    <p class="help-block">Skriv in ditt användarnamn</p>
+  </div>
+</div>
+
+<!-- Password input-->
+<div class="control-group">
+  <label class="control-label" for="txtPassword">Lösenord</label>
+  <div class="controls">
+    <input id="txtPassword" name="txtPassword" placeholder="Lösen, 8-tecken långt" class="input-medium" required="" type="password">
+    <p class="help-block">Skriv in lösenord</p>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="txtEpost">Epost</label>
+  <div class="controls">
+    <input id="txtEpost" name="txtEpost" placeholder="Din epost-adress" class="input-medium" required="" type="text">
+    <p class="help-block">Epost-adress</p>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="control-group">
+  <label class="control-label" for="cmdSkapa">Skapa användare</label>
+  <div class="controls">
+    <button id="cmdSkapa" name="cmdSkapa" class="btn btn-primary" onclick="finnsUser();">Skapa</button>
+  </div>
+</div>
+</div>
+</fieldset>
+<!--</form>-->
+<div class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="navbar-inner"><p><b>&copy; CDMOLNET 2013</b></p></div>
+        </div>
+</body>
+</html>
